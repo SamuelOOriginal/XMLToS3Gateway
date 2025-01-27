@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+efin:
+  service:
+    name: ${spring.application.name}
+  logging:
+    level: ${LOGGING_LEVEL:INFO}
+    appender: ${LOGGING_APPENDER:CONSOLE}
+  info:
+    app:
+      name: '@project.name@'
+      description: '@project.description@'
+      version: '@project.version@'
+spring:
+  application:
+    name: XMLToS3Gateway
+    main:
+      banner-mode: "off"
+    mvc:
+      async:
+        request-timeout: 300000
+    servlet:
+      multipart:
+        enabled: true
+        maxRequestSize: 10GB
+        maxFileSize: 10GB
+    cloud:
+      aws:
+        bucket:
+          region: ${MINIO_S3_REGION}
+          bucketName: ${MINIO_S3_STORAGE_NAME}
+springdoc:
+  api-docs:
+    path: /api-docs
+    resolve-schema-properties: true
+  override-with-generic-response: false
+  paths-to-exclude: /**/api-docs,/swagger-resources/**
+  swagger-ui:
+    disable-swagger-default-url: true
+    path: /swagger-ui.html
+
+miniio:
+  bucket:
+    host: ${MINIO_S3_HOST}
+    accessKey: ${MINIO_S3_ACCESS_KEY}
+    secretKey: ${MINIO_S3_SECRET_KEY}
+    region: us-east-1
+    bucketName: ${MINIO_S3_STORAGE_NAME}
