@@ -15,12 +15,12 @@
 	<description>Project to upload archive xml to S3(MINIO)</description>
 	<properties>
 		<java.version>21</java.version>
-		<org.springdoc.version>2.2.0</org.springdoc.version>
+		<org.springdoc.version>2.8.10</org.springdoc.version>
 		<spring.cloud.version>2023.0.0</spring.cloud.version>
 		<org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
 		<lombok.version>1.18.30</lombok.version>
-		<aws-sdk.version>2.20.121</aws-sdk.version>
-		<org.springdoc.version>2.2.0</org.springdoc.version>
+		<aws-sdk.version>2.32.31</aws-sdk.version>
+		<org.springdoc.version>2.8.10</org.springdoc.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -57,7 +57,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>6.1.14</version>
+			<version>6.2.10</version>
 		</dependency>
 		<!-- BEGIN OF AWS DEPENDENCIES -->
 		<dependency>
