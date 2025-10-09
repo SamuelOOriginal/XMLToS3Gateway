@@ -19,7 +19,7 @@
 		<spring.cloud.version>2023.0.0</spring.cloud.version>
 		<org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
 		<lombok.version>1.18.30</lombok.version>
-		<aws-sdk.version>2.20.121</aws-sdk.version>
+		<aws-sdk.version>2.33.12</aws-sdk.version>
 		<org.springdoc.version>2.2.0</org.springdoc.version>
 	</properties>
 	<dependencies>
